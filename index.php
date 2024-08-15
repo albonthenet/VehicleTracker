@@ -16,7 +16,7 @@ if (!empty($data) && is_object($data) && property_exists($data,'lat') && propert
             $db->exec('CREATE TABLE coordinates (latitude TEXT, longitude TEXT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, added TIMESTAMP DEFAULT CURRENT_TIMESTAMP ) ');
 		}
 
-		$regex = '/^(|\-)([0-9]{2,3}\.[0-9]{0,8})$/';
+		$regex = '/^(|\-)([0-9]{1,3}\.[0-9]{0,8})$/';
 
 if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
 	{
