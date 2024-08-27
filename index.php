@@ -177,13 +177,6 @@ var Truck = L.icon({
 L.marker([tableLastLat, tableLastLon], {icon: Truck}).addTo(map);
 
 }
-
-var track = new L.KML("boundary.kml");
-		track.on("loaded", function(e) {
-			map.fitBounds(e.target.getBounds());
-		});
-		map.addLayer(track);
-
 	
 function getFirst(row){
 	lat = row.children[0].innerHTML;
